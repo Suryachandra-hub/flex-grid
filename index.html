@@ -3,138 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Static Web Page</title>
+    <title>Simple Flex & Grid Layout</title>
     <!-- Load Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Using Inter font globally */
+        /* Using Inter font globally and setting a smooth scroll */
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
-        }
-        /* Custom background gradient for the hero section */
-        .hero-bg {
-            background: linear-gradient(135deg, #1f2937, #111827);
+            background-color: #f0f4f8; /* Light, calming background */
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="text-gray-800">
 
-    <!-- Navigation Bar (Flexbox for alignment) -->
-    <nav class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo/Branding -->
-                <a href="#" class="text-2xl font-extrabold text-indigo-600">
-                    My Portfolio
-                </a>
-                <!-- Desktop Links (Flexbox for spacing) -->
-                <div class="hidden sm:flex space-x-8">
-                    <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
-                    <a href="#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Services</a>
-                    <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
-                </div>
+    <!-- 1. Navigation Bar (FLEXBOX Demonstration) -->
+    <nav class="bg-indigo-600 text-white p-4 shadow-lg">
+        <!-- FLEX: Used to align the logo on the left and links on the right -->
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            
+            <span class="text-xl font-bold">My Simple Site</span>
+            
+            <!-- FLEX: Used to space out navigation links -->
+            <div class="flex space-x-6">
+                <a href="#flex-section" class="hover:text-indigo-200 transition">Flex Demo</a>
+                <a href="#grid-section" class="hover:text-indigo-200 transition">Grid Demo</a>
             </div>
         </div>
     </nav>
 
-    <!-- 1. Hero Section -->
-    <section class="hero-bg py-20 md:py-32 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="flex flex-col items-center">
-                <!-- Profile Placeholder Image -->
-                <img src="https://placehold.co/120x120/4f46e5/ffffff?text=U" alt="Profile" 
-                     class="rounded-full border-4 border-indigo-400 shadow-xl mb-6">
-                
-                <h2 class="text-4xl sm:text-6xl font-extrabold leading-tight mb-4">
-                    Hello, I'm <span class="text-indigo-400">Sunil Varma</span>
-                </h2>
-                <p class="text-xl text-gray-300 max-w-2xl mb-8">
-                    A passionate developer specializing in responsive web applications and clean, scalable code.
-                </p>
-                <a href="#contact" class="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 transform hover:scale-105">
-                    Let's Connect
-                </a>
-            </div>
+    <!-- 2. Hero Section (FLEXBOX for Centering) -->
+    <section id="flex-section" class="bg-white py-16 border-b border-gray-200">
+        <!-- FLEX: Used to vertically and horizontally center content -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
+            <h2 class="text-3xl font-extrabold text-indigo-600 mb-3">
+                Welcome to Flexbox
+            </h2>
+            <p class="text-lg text-gray-600 max-w-xl">
+                Flexbox is perfect for aligning items in a single row or column. See how easily the text above is centered and the links below are spaced out!
+            </p>
         </div>
     </section>
+    
+    <!-- 3. Features Section (GRID Demonstration) -->
+    <section id="grid-section" class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl font-extrabold text-center text-gray-800 mb-8">
+                The Power of Grid
+            </h2>
 
-    <!-- 2. About Section (Simple Flex/Text Block) -->
-    <section id="about" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">About Me</h2>
-            <div class="max-w-4xl mx-auto text-lg text-gray-600 leading-relaxed">
-                <p class="mb-4">
-                    I have over 5 years of experience building dynamic and user-centric digital experiences. My core philosophy is centered around creating applications that are not just functional but also a pleasure to use, prioritizing **performance and accessibility**.
-                </p>
-                <p>
-                    I am proficient in modern front-end frameworks and enjoy solving complex design challenges using the power of **CSS Grid and Flexbox** to ensure pixel-perfect layouts across all devices.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. Services Section (Grid for card layout) -->
-    <section id="services" class="py-16 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">My Expertise</h2>
-
-            <!-- GRID Layout for Services -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- GRID: Used to create a responsive, multi-column layout -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 <!-- Card 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 border-t-4 border-red-500">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Frontend Development</h3>
-                    <p class="text-gray-600">Building responsive, lightning-fast user interfaces using modern standards like Tailwind CSS, React, and Angular.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-red-500">
+                    <h3 class="text-xl font-semibold mb-2">Column 1</h3>
+                    <p class="text-gray-600">On mobile, this card takes up 1 full column. On tablets and desktops, it's one of three columns!</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 border-t-4 border-blue-500">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">UX/UI Design</h3>
-                    <p class="text-gray-600">Creating intuitive user flows and visually appealing designs that maximize engagement and conversion rates.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+                    <h3 class="text-xl font-semibold mb-2">Column 2</h3>
+                    <p class="text-gray-600">Grid is great for complex section layouts, making sure all your items align neatly in rows and columns.</p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 border-t-4 border-green-500">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Cloud Integration</h3>
-                    <p class="text-gray-600">Integrating dynamic features using cloud services like Firebase and various other RESTful APIs.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-green-500">
+                    <h3 class="text-xl font-semibold mb-2">Column 3</h3>
+                    <p class="text-gray-600">The entire area handles the resizing; you only define the rules for the grid, not each individual item.</p>
                 </div>
 
             </div>
-        </div>
-    </section>
-
-    <!-- 4. Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Get In Touch</h2>
-            
-            <form action="#" method="POST" class="space-y-6">
-                <div>
-                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Your Name" required>
-                </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500" placeholder="your.email@example.com" required>
-                </div>
-                <div>
-                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Tell me about your project..." required></textarea>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="w-full sm:w-auto px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
-                        Send Message
-                    </button>
-                </div>
-            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="hero-bg py-8 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
-            <p>&copy; 2025 Sunil Varma Portfolio. All rights reserved.</p>
+    <footer class="bg-gray-800 py-6 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <p class="text-gray-400">Layout built using Flexbox and Grid principles.</p>
         </div>
     </footer>
 
