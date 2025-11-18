@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Static Web Page</title>
+    <!-- Load Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Using Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom background gradient for the hero section */
+        .hero-bg {
+            background: linear-gradient(135deg, #1f2937, #111827);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar (Flexbox for alignment) -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Branding -->
+                <a href="#" class="text-2xl font-extrabold text-indigo-600">
+                    My Portfolio
+                </a>
+                <!-- Desktop Links (Flexbox for spacing) -->
+                <div class="hidden sm:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                    <a href="#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Services</a>
+                    <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="hero-bg py-20 md:py-32 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center">
+                <!-- Profile Placeholder Image -->
+                <img src="https://placehold.co/120x120/4f46e5/ffffff?text=U" alt="Profile" 
+                     class="rounded-full border-4 border-indigo-400 shadow-xl mb-6">
+                
+                <h2 class="text-4xl sm:text-6xl font-extrabold leading-tight mb-4">
+                    Hello, I'm <span class="text-indigo-400">Sunil Varma</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mb-8">
+                    A passionate developer specializing in responsive web applications and clean, scalable code.
+                </p>
+                <a href="#contact" class="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 transform hover:scale-105">
+                    Let's Connect
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About Section (Simple Flex/Text Block) -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">About Me</h2>
+            <div class="max-w-4xl mx-auto text-lg text-gray-600 leading-relaxed">
+                <p class="mb-4">
+                    I have over 5 years of experience building dynamic and user-centric digital experiences. My core philosophy is centered around creating applications that are not just functional but also a pleasure to use, prioritizing **performance and accessibility**.
+                </p>
+                <p>
+                    I am proficient in modern front-end frameworks and enjoy solving complex design challenges using the power of **CSS Grid and Flexbox** to ensure pixel-perfect layouts across all devices.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Services Section (Grid for card layout) -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">My Expertise</h2>
+
+            <!-- GRID Layout for Services -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 border-t-4 border-red-500">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Frontend Development</h3>
+                    <p class="text-gray-600">Building responsive, lightning-fast user interfaces using modern standards like Tailwind CSS, React, and Angular.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 border-t-4 border-blue-500">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">UX/UI Design</h3>
+                    <p class="text-gray-600">Creating intuitive user flows and visually appealing designs that maximize engagement and conversion rates.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 border-t-4 border-green-500">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Cloud Integration</h3>
+                    <p class="text-gray-600">Integrating dynamic features using cloud services like Firebase and various other RESTful APIs.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Get In Touch</h2>
+            
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Your Name" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500" placeholder="your.email@example.com" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="w-full sm:w-auto px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="hero-bg py-8 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 Sunil Varma Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
